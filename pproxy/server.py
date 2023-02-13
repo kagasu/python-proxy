@@ -213,7 +213,11 @@ class ProxyDirect(object):
     def udp_prepare_connection(self, host, port, data):
         return data
     def wait_open_connection(self, host, port, local_addr, family):
-        return asyncio.open_connection(host=host, port=port, local_addr=local_addr, family=family)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        SO_BINDTODEVICE = 25
+        sock.setsockopt(socket.SOL_SOCKET, SO_BINDTODEVICE, str(local_addr[0] + '\0').encode('utf-8'))
+        sock.connect((host, port))
+        return asyncio.open_connection(sock=sock, family=family)
     async def open_connection(self, host, port, local_addr, lbind, timeout=SOCKET_TIMEOUT):
         try:
             local_addr = local_addr if self.lbind == 'in' else (self.lbind, 0) if self.lbind else \
