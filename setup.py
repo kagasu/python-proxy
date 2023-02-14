@@ -16,7 +16,7 @@ setup(
     name                = find_value('title'),
     use_scm_version     = True,
     description         = find_value('description'),
-    long_description    = read('README.rst'),
+    long_description    = read('README.md'),
     url                 = find_value('url'),
     author              = find_value('author'),
     author_email        = find_value('email'),
