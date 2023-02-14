@@ -18,3 +18,10 @@ pproxy \
 git clone https://github.com/kagasu/python-proxy
 pip install -e python-proxy
 ```
+
+# Note
+|OS|Tested?|Works fine?|
+|:--|:--|:--|
+|Ubuntu 22.04 LTS|Yes|Yes|
+|macOS|No|Yes. i think.|
+|Windows|No|No. i think.|
