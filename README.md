@@ -12,3 +12,9 @@ pproxy \
   -l socks5://0.0.0.0:8000/@eth0 \
   -l socks5://0.0.0.0:8001/@eth1
 ```
+
+# Install
+```
+git clone https://github.com/kagasu/python-proxy
+pip install -e python-proxy
+```
