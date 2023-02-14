@@ -1,5 +1,5 @@
 # python-proxy
-This forks allows bind to device. 
+This fork allows bind to network device. 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/1202244/218605530-82e96479-01a3-4371-89a7-656b874a508e.svg">
