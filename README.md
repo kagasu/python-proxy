@@ -16,7 +16,8 @@ pproxy \
 # Install
 ```
 git clone https://github.com/kagasu/python-proxy
-pip install -e python-proxy
+cd python-proxy
+pip install -e . --break-system-packages
 ```
 
 # Note
